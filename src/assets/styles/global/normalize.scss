@@ -1,0 +1,326 @@
+@import "../../../assets/styles/variables";
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+iframe,
+ol,
+ul,
+li,
+form,
+label,
+i,
+footer,
+header,
+menu,
+nav,
+a,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td,
+video,
+canvas,
+section,
+  /*commonly used tags*/
+applet,
+object,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+hgroup,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+dl,
+dt,
+dd,
+fieldset,
+legend,
+article,
+aside,
+details,
+embed,
+figure,
+figcaption,
+output,
+section,
+summary,
+time,
+mark,
+audio,
+center,
+ruby {
+  margin         : 0;
+  padding        : 0;
+  border         : 0;
+  font-size      : 100%;
+  font           : inherit;
+  vertical-align : baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+label {
+  display : block;
+}
+
+ol,
+ul {
+  list-style : none;
+  padding    : 0;
+  margin     : 0;
+}
+
+table {
+  width           : 100%;
+  border-collapse : collapse;
+  border-spacing  : 0;
+}
+
+* {
+  outline                     : none;
+  -webkit-box-sizing          : border-box;
+  box-sizing                  : border-box;
+  -webkit-tap-highlight-color : transparent;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance : none;
+  -moz-appearance    : none;
+  appearance         : none;
+}
+
+a {
+  display         : inline-block;
+  text-decoration : none;
+  font            : inherit;
+}
+
+button {
+  cursor   : pointer;
+  position : relative;
+}
+
+input,
+button,
+select,
+textarea {
+  display : inline-block;
+  padding : 0;
+  border  : 0;
+  font    : inherit;
+}
+
+svg {
+  width  : 100%;
+  height : 100%;
+}
+
+img {
+  max-width  : 100%;
+  max-height : 100%;
+}
+
+strong {
+  font-weight : 600;
+}
+
+html, body {
+  height           : 100%;
+  margin           : 0;
+  padding          : 0;
+  background-color : #ffffff;
+  font-family      : Arial;
+  /*font-family: 'ArialunicodeMS';*/
+  position         : relative;
+
+}
+
+header, section {
+  /* overflow-y: auto; */
+  /* overflow-x: hidden; */
+  /* -webkit-overflow-scrolling: touch; */
+}
+
+
+.G-admin-pages {
+  padding : 0 0 0 200px;
+  width   : 100%;
+  @media(max-width : 766.98px) {
+    padding : 0;
+  }
+}
+
+.notification-container {
+  z-index : 9999999999;
+}
+
+.notification-success {
+  background-color : white;
+  border-left      : 6px solid forestgreen;
+  box-shadow       : none;
+  color            : black;
+
+  &:before {
+    color : forestgreen !important;
+    //content: '' !important;
+  }
+}
+
+.notification-error {
+  background-color : white;
+  border-left      : 6px solid red;
+  box-shadow       : none;
+  color            : black;
+
+  &:before {
+    color : red !important;
+    //content: '' !important;
+  }
+}
+
+
+.P-admin-container {
+  height     : calc(100vh - 90px);
+  padding          : 15px 0 15px 15px ;
+  box-shadow : inset 0 0 10px 2px $shadow-black;
+
+  .P-admin-page-box {
+
+    width            : 100%;
+    height           : calc(100vh - 120px);
+    padding          : 15px ;
+    overflow         : hidden;
+    overflow-y       : auto;
+    background-color : white;
+
+    &::-webkit-scrollbar {
+
+      width: 6px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background : #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background : $app-color;
+
+    }
+  }
+}
+
+
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background : #f1f1f1;
+  display    : none;
+}
+
+/* Handle */
+
+
+.spinner {
+  margin     : 100px auto 0;
+  width      : 70px;
+  text-align : center;
+}
+
+.spinner > div {
+  width             : 18px;
+  height            : 18px;
+  background-color  : #333;
+
+  border-radius     : 100%;
+  display           : inline-block;
+  -webkit-animation : sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation         : sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay : -0.32s;
+  animation-delay         : -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay : -0.16s;
+  animation-delay         : -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform : scale(0)
+  }
+  40% {
+    -webkit-transform : scale(1.0)
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform : scale(0);
+    transform         : scale(0);
+  }
+  40% {
+    -webkit-transform : scale(1.0);
+    transform         : scale(1.0);
+  }
+}
+
+
+.G-image-cover {
+  background-position : center;
+  background-repeat   : no-repeat;
+  background-size     : cover;
+}
+
+.G-image-contain {
+  background-position : center;
+  background-repeat   : no-repeat;
+  background-size     : contain;
+}

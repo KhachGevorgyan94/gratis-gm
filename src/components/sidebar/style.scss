@@ -1,0 +1,139 @@
+@import "../../assets/styles/variables";
+
+.sidenav-block {
+  max-width        : 200px;
+  width            : 100%;
+  position         : fixed;
+  height           : 100vh;
+  z-index          : 9999999;
+  background-color : $menu-bg;
+  padding-top: 10px;
+
+
+  .P-sidenav-list {
+    border-top     : 1px solid rgba(0, 0, 0, 0.2);
+    width          : 100%;
+    height         : calc(100% - 75px);
+    padding-bottom : 35px;
+    padding-top: 20px;
+
+    a {
+      color      : $white;
+      width      : 100%;
+      padding    : 15px 20px;
+      transition : 0.3s;
+
+      i {
+        transition : 0.3s;
+      }
+
+      &:hover {
+        background-color : $menu-active-hover;
+        color            : white;
+
+        i {
+          filter : grayscale(1) contrast(0);
+        }
+      }
+
+      &.activeLink {
+        background-color : $menu-active;
+        color            : white;
+      }
+    }
+
+  }
+
+}
+
+.P-logo {
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  padding         : 10px 0;
+
+  a {
+    width               : 80px;
+    height              : 40px;
+    background-position : center;
+    background-repeat   : no-repeat;
+    background-size     : contain;
+  }
+
+  .logo-sign-in {
+    width               : 120px;
+    height              : 80px;
+    background-position : center;
+    background-repeat   : no-repeat;
+    background-size     : contain;
+  }
+}
+
+.P-bg-vor-mobile {
+  position         : fixed;
+  width            : 100%;
+  height           : 100%;
+  background-color : rgba(0, 0, 0, 0.5);
+  top              : 0;
+  left             : 0;
+  z-index          : 999;
+  opacity          : 0;
+  visibility       : hidden;
+  transition       : 0.3s;
+
+  &.open-bg-mobile {
+    opacity    : 1;
+    visibility : visible;
+  }
+
+}
+
+.P-admin-logo {
+  width  : 150px;
+  height : 60px;
+  margin : 0 auto;
+}
+
+.P-sidenav-list {
+
+  .P-select-language {
+    margin-left : 10px;
+    margin-top  : 15px;
+    display     : none;
+  }
+}
+
+.P-contact-us {
+  p {
+    margin-bottom : 10px;
+
+  }
+
+  margin-left : 10px;
+
+  ul {
+    li {
+      font-size : 12px;
+
+      h3 {
+        font-weight : 600;
+      }
+    }
+  }
+}
+
+.P-menu-list {
+  width      : 100%;
+  margin-top : -2px;
+}
+
+
+.P-menu-icon {
+  width               : 20px;
+  height              : 20px;
+  background-repeat   : no-repeat;
+  background-size     : contain;
+  background-position : center;
+  margin-right        : 10px;
+  display             : block;
+}

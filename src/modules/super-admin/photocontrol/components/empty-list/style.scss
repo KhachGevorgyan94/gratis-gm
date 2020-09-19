@@ -1,0 +1,19 @@
+@import "src/assets/styles/variables";
+
+.P-empty-photo-control-image {
+  width  : 180px;
+  height : 180px;
+  margin : 0 auto;
+}
+
+.P-empty-photo-control {
+  margin-top: 80px;
+  h3 {
+    font-size  : 24px;
+    text-align : center;
+    color      : $main-green;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}

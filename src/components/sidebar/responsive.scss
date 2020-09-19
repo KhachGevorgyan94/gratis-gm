@@ -1,0 +1,18 @@
+@media(max-width: 766.98px) {
+  .sidenav-block {
+    left: -200px;
+    transition: 0.3s;
+
+    &.P-menu-open {
+      left: 0;
+    }
+
+  }
+  .P-sidenav-list {
+    .P-select-language {
+      display: block;
+      margin-left: 10px;
+      margin-top: 15px;
+    }
+  }
+}

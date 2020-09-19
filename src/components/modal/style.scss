@@ -1,0 +1,113 @@
+.E-modal-wrap {
+  padding          : 25px 15px;
+  width            : 100vw;
+  position         : fixed;
+  top              : 0;
+  left             : 0;
+  right            : 0;
+  bottom           : 0;
+  z-index          : 9999999;
+  background-color : rgba(0, 0, 0, 0.3);
+  transition       : 0.3s;
+  overflow         : hidden;
+  overflow-y       : auto;
+
+  &::-webkit-scrollbar {
+    display : none;
+  }
+
+  .E-modal-content {
+    position         : absolute;
+    top              : 50%;
+    left             : 50%;
+    transform        : translate(-50%, -50%);
+    box-shadow       : 0 1px 15px 0 rgba(0, 0, 0, 0.4);
+    border-radius    : 10px;
+    background-color : #fff;
+
+    &.G-edit-create-modal {
+      max-width : 500px;
+      width     : 100%;
+    }
+
+    &.G-delete-modal {
+      max-width : 400px;
+      width     : 100%;
+    }
+
+    &.G-change-director-modal-media {
+      @media(max-width : 576px) {
+        width : 90vw;
+      }
+    }
+
+    &.G-change-password-media {
+      @media(max-width : 576px) {
+        width : 90vw;
+      }
+    }
+
+    &.G-create-cash-box-user-media {
+      @media(max-width : 576px) {
+        width : 90vw;
+      }
+    }
+
+    &.G-create-edit-branch-modal-media {
+      max-width : 400px;
+      width     : 100%;
+      @media(max-width : 576px) {
+        width : 90vw;
+      }
+    }
+
+  }
+}
+
+
+@media(max-height : 400px) {
+  .E-modal-content {
+    &.G-change-director-modal-media, &.G-create-cash-box-user-media {
+      max-width : 326px;
+      width     : 100%;
+      position  : relative;
+      margin    : 10px auto;
+      left      : 0;
+      top       : 0;
+      transform : translate(0);
+    }
+
+    &.G-create-cash-box-user-media {
+      max-width : 366px;
+    }
+  }
+}
+
+
+@media(max-height : 300px) {
+  .E-modal-content {
+    &.G-change-password-media {
+      max-width : 355px;
+      width     : 100%;
+      position  : relative;
+      margin    : 10px auto;
+      left      : 0;
+      top       : 0;
+      transform : translate(0);
+    }
+  }
+}
+
+@media(max-height : 580px) {
+  .E-modal-content {
+    &.G-create-edit-branch-modal-media {
+      max-width : 355px;
+      width     : 100%;
+      position  : relative;
+      margin    : 10px auto;
+      left      : 0;
+      top       : 0;
+      transform : translate(0);
+    }
+  }
+}

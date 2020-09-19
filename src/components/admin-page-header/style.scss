@@ -1,0 +1,89 @@
+@import "../../assets/styles/variables";
+
+.G-admin-header {
+  min-height       : 90px;
+  width            : 100%;
+  padding          : 0 25px;
+  position         : relative;
+  background-color : $page-header-bg;
+}
+
+
+.P-open-menu {
+  z-index         : 99999;
+  display         : none;
+  width           : 25px;
+  height          : 20px;
+  position        : absolute;
+  left            : 15px;
+  top             : 50%;
+  transform       : translateY(-50%);
+  flex-direction  : column;
+  justify-content : space-between;
+  cursor          : pointer;
+  @media(max-width : 766.98px) {
+    display : flex;
+  }
+
+  span {
+    display          : block;
+    width            : 100%;
+    height           : 3px;
+    background-color : $white;
+  }
+
+}
+
+.G-admin-title {
+  color : $white;
+
+  h3 {
+    font-size : 28px;
+  }
+}
+
+.P-select-language {
+  .E-select-component {
+    background-color : $white;
+    width            : 80px;
+    height           : 30px;
+
+    .E-select-header {
+      padding-left : 5px;
+      height       : 30px;
+    }
+  }
+}
+
+@media(max-width : 766.98px) {
+  .P-select-language {
+    display : none;
+  }
+}
+
+
+.L-log-out-btn {
+  width : 150px;
+
+  button {
+    height: 40px !important;
+    &:hover {
+      background-color : $white !important;
+
+      p {
+        color : $black !important;
+      }
+    }
+
+    &:disabled {
+      cursor           : no-drop;
+      transition       : 0.3s;
+      background-color : $white;
+
+    }
+
+    .sk-fading-circle .sk-circle:before {
+      background-color : $app-color;
+    }
+  }
+}
