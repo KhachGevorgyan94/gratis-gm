@@ -54,7 +54,6 @@ class SuperAdminPhotoControl extends Component {
               <div className="P-admin-page-box">
                 <PhotoControlHeader/>
                 {data ? <PhotoControlList data={data}/> : null}
-
               </div>
             </div>
           </div>
