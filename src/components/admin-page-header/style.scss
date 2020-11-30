@@ -1,9 +1,9 @@
 @import "../../assets/styles/variables";
 
 .G-admin-header {
-  min-height       : 90px;
+  min-height       : 50px;
   width            : 100%;
-  padding          : 0 25px;
+  padding          : 0 25px 0 35px ;
   position         : relative;
   background-color : $page-header-bg;
 }
@@ -38,7 +38,8 @@
   color : $white;
 
   h3 {
-    font-size : 28px;
+    font-size : 20px;
+    color: $white;
   }
 }
 
@@ -63,10 +64,14 @@
 
 
 .L-log-out-btn {
-  width : 150px;
+  width : 120px;
 
   button {
-    height: 40px !important;
+    height: 30px !important;
+    p{
+      font-size: 15px !important;
+
+    }
     &:hover {
       background-color : $white !important;
 

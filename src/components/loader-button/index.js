@@ -5,11 +5,12 @@ import './style.scss';
 class ButtonLoader extends Component {
 
   render() {
-    const {classChange, buttonText, isLoading, onClick} = this.props;
+    const {classChange, buttonText, isLoading, onClick,disable} = this.props;
 
     return (
-        <div className={`G-btn ${classChange}`}>
-          <button onClick={onClick} disabled={isLoading}>
+        <div className={`G-btn ${classChange} `}>
+
+          <button onClick={!disable? onClick: ()=>{}} disabled={disable}>
             {isLoading ? <div className="L-loader-animation">
               <div className="sk-fading-circle">
                 <div className="sk-circle1 sk-circle"/>

@@ -48,6 +48,7 @@ class SignIn extends Component {
 
       } else {
         this.errorMessages(this.state.validation.errorList)
+        this.setState({isLoading: false})
       }
     })
   }

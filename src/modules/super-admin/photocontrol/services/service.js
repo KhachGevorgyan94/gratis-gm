@@ -1,16 +1,20 @@
 import Settings from "../../../../platform/serivces/settings";
 
 export const StatusList = [
-  {
-    name: Settings.translations.all_text,
-    value: 1
-  },
+  // {
+  //   name: Settings.translations.all_text,
+  //   value: 0
+  // },
   {
     name: Settings.translations.pending_text,
-    value: 2
+    value: 'pending'
   },
   {
     name: Settings.translations.rejected_text,
-    value: 3
+    value: 'rejected'
+  } ,
+  {
+    name: Settings.translations.order_in_pending_text,
+    value: 'order_pending'
   }
 ];

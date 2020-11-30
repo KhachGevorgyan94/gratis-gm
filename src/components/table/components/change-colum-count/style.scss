@@ -1,0 +1,188 @@
+@import "../../../../assets/styles/variables";
+
+.I-multi-select {
+  margin-top : 5px;
+  height     : 35px;
+  position   : relative;
+  font-size  : 16px;
+  width      : 180px;
+
+  > .I-select-header {
+    width              : 100%;
+    height             : 35px;
+    border             : none;
+    background-color   : $green-select-table;
+    color              : $white;
+    padding            : 0 15px;
+    -webkit-box-shadow : 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow         : 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius      : 6px;
+    font-weight        : normal;
+    display            : flex;
+    align-items        : center;
+    justify-content    : space-between;
+    cursor             : pointer;
+
+    > span {
+      width         : 100%;
+      overflow      : hidden;
+      white-space   : nowrap;
+      text-overflow : ellipsis;
+      font-size     : 16px;
+      font-style    : normal;
+      font-weight   : 500;
+    }
+
+    > i {
+      padding      : 0;
+      font-size    : 8px;
+      border-color : $white;
+    }
+
+    > .I-select-placeholder {
+      opacity : 0.4;
+    }
+  }
+
+  > .I-select-body {
+    top             : 40px;
+    width           : 100%;
+    margin          : 0;
+    z-index         : 19999;
+    position        : absolute;
+    max-height      : 250px;
+    box-shadow      : 0 0 10px $shadow-black-1;
+    background      : white;
+    overflow-y      : auto;
+    border-radius   : 10px;
+    list-style-type : none;
+    padding: 0 10px;
+
+    &::-webkit-scrollbar-thumb {
+      width            : 3px;
+      background-color : $green-select-table;
+      border-radius    : 10px;
+    }
+
+    &::-webkit-scrollbar {
+      background-color : $shadow-black-1;
+      width            : 5px;
+      height           : 10px;
+    }
+
+    > li {
+      width         : 100%;
+      cursor        : pointer;
+      height        : 30px;
+      padding       : 0 10px;
+      display       : block;
+      overflow      : hidden;
+      line-height   : 30px;
+      white-space   : nowrap;
+      text-overflow : ellipsis;
+      font-size     : 14px;
+      transition    : 0.3s;
+      position      : relative;
+      padding-left  : 25px;
+
+      &:hover {
+        background : transparentize(#dedede, 0.78);
+      }
+
+      > img {
+        vertical-align : middle;
+      }
+
+      &.I-select-empty-label {
+        color  : transparentize(#000000, 0.6);
+        cursor : default;
+
+        &:hover {
+          background : inherit;
+        }
+      }
+
+      &.I-select-new-label {
+        color : $app-color;
+      }
+
+      &.I-chosen {
+        color : $app-color;
+      }
+    }
+  }
+}
+
+
+.clear-text {
+  position : absolute;
+  right    : 7px !important;
+  width    : 10px;
+  height   : 10px;
+  top      : 25px !important;
+  cursor   : pointer;
+
+  &:before {
+    position         : absolute;
+    content          : '';
+    width            : 100%;
+    height           : 2px;
+    background-color : black;
+    transform        : rotate(45deg);
+    border-radius    : 15px;
+    top              : 2px !important;
+    left             : 0;
+  }
+
+  &:after {
+    content          : '';
+    position         : absolute;
+    width            : 100%;
+    height           : 2px;
+    background-color : black;
+    transform        : rotate(-45deg);
+    border-radius    : 15px;
+    top              : 2px !important;
+    left             : 0;
+
+  }
+}
+
+
+.I-item-checkbox {
+  position      : absolute;
+  left          : 0;
+  top           : 6px;
+  width         : 15px;
+  height        : 15px;
+  border        : 2px solid $green-select-table;
+  border-radius : 3px;
+  display       : block;
+  transition    : .3s;
+
+  &.I-checked {
+    background-color : $green-select-table;
+
+    &:before {
+      opacity    : 1;
+      visibility : visible;
+    }
+  }
+
+  &:before {
+    position      : absolute;
+    content       : '';
+    width         : 8px;
+    height        : 5px;
+    border        : none;
+    border-left   : 1px solid white;
+    border-bottom : 1px solid white;
+    transition    : 0.3s;
+    opacity       : 0;
+    visibility    : hidden;
+    transform     : rotate(-45deg);
+    left: 2px;
+    top: 1px;
+  }
+
+}

@@ -1,13 +1,14 @@
 @import "../../assets/styles/variables";
 
 .sidenav-block {
-  max-width        : 200px;
+  max-width        : 150px;
   width            : 100%;
   position         : fixed;
   height           : 100vh;
   z-index          : 9999999;
   background-color : $menu-bg;
-  padding-top: 10px;
+  padding-top      : 10px;
+  transition       : 0.3s;
 
 
   .P-sidenav-list {
@@ -15,13 +16,14 @@
     width          : 100%;
     height         : calc(100% - 75px);
     padding-bottom : 35px;
-    padding-top: 20px;
+    padding-top    : 20px;
 
     a {
       color      : $white;
       width      : 100%;
-      padding    : 15px 20px;
+      padding    : 10px 10px;
       transition : 0.3s;
+      font-size  : 14px;
 
       i {
         transition : 0.3s;
@@ -89,9 +91,10 @@
 }
 
 .P-admin-logo {
-  width  : 150px;
-  height : 60px;
-  margin : 0 auto;
+  width    : 120px;
+  height   : 60px;
+  margin   : 0 auto;
+  overflow : hidden;
 }
 
 .P-sidenav-list {
@@ -124,16 +127,55 @@
 
 .P-menu-list {
   width      : 100%;
-  margin-top : -2px;
+  margin-top : 20px;
+  overflow   : hidden;
 }
 
 
 .P-menu-icon {
-  width               : 20px;
-  height              : 20px;
+  width               : 17px;
+  height              : 17px;
   background-repeat   : no-repeat;
   background-size     : contain;
   background-position : center;
   margin-right        : 10px;
   display             : block;
+}
+
+
+.P-mini-menu-btn {
+  width            : 40px;
+  height           : 40px;
+  border-radius    : 50%;
+  cursor           : pointer;
+  background-color : $menu-active-hover;
+  position         : absolute;
+  display          : flex;
+  align-items      : center;
+  justify-items    : center;
+  right            : -20px;
+  top              : 60px;
+
+  div {
+    width         : 40px;
+    height        : 40px;
+    display       : flex;
+    align-items   : center;
+    justify-items : center;
+  }
+
+  svg {
+    width  : 55%;
+    height : 55%;
+    fill   : $green-select-table;
+    margin : 0 auto;
+  }
+}
+
+
+.P-admin-logo-mini {
+  display : none;
+}
+.P-close-icon-menu{
+  display: none !important;
 }

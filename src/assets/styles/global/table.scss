@@ -1,98 +1,194 @@
 @import "../variables";
 
-.G-table-block {
-  padding : 20px 0;
+//.G-table-block {
+//  padding : 20px 0;
+//
+//  .G-overflow-table {
+//    width         : 100%;
+//    overflow      : hidden;
+//    overflow-x    : auto;
+//    box-shadow    : 0 0 10px 0px $shadow-black;
+//    border-radius : 10px;
+//
+//    &::-webkit-scrollbar {
+//
+//      height : 6px;
+//    }
+//
+//    /* Track */
+//    &::-webkit-scrollbar-track {
+//      background : #f1f1f1;
+//    }
+//
+//    /* Handle */
+//    &::-webkit-scrollbar-thumb {
+//      background : $app-color;
+//
+//    }
+//
+//    a {
+//      width      : 100%;
+//      display    : block;
+//      color      : black;
+//      transition : 0.3s;
+//
+//      &:hover {
+//        background-color : rgba(0, 0, 0, 0.05);
+//      }
+//    }
+//  }
+//
+//
+//  .G-table-tr {
+//    display         : flex;
+//    justify-content : space-between;
+//
+//    .G-table-td {
+//      padding     : 10px;
+//      min-height  : 45px;
+//      display     : flex;
+//      align-items : center;
+//      position    : relative;
+//      max-width   : 100%;
+//      border-left : 1px solid $gray;
+//
+//      &:first-child {
+//        border-left : 1px solid transparent;
+//      }
+//
+//
+//      p {
+//        overflow      : hidden;
+//        text-overflow : ellipsis;
+//        font-weight   : normal;
+//        white-space   : nowrap;
+//        text-align    : center;
+//      }
+//
+//    }
+//
+//  }
+//
+//
+//  .G-table-header {
+//    .G-table-tr {
+//      P {
+//        font-weight : 500;
+//      }
+//    }
+//  }
+//
+//  .G-table-body {
+//    .G-table-tr {
+//      cursor : pointer;
+//
+//      &:hover {
+//        .G-table-td {
+//          background-color : rgba(0, 0, 0, 0.04);
+//        }
+//      }
+//    }
+//
+//    .G-table-td {
+//      transition : 0.3s;
+//      border-top : 1px solid $gray;
+//    }
+//  }
+//}
+//
+//
+//.G-header-table-new {
+//  tr {
+//    th {
+//      font-weight : bold;
+//    }
+//  }
+//}
+//
+//
+//
+//.G-new-table {
+//
+//  th, td {
+//    vertical-align : middle;
+//    padding        : 5px 15px !important;
+//  }
 
-  .G-overflow-table {
-    width         : 100%;
-    overflow      : hidden;
-    overflow-x    : auto;
-    box-shadow    : 0 0 10px 0px $shadow-black;
-    border-radius : 10px;
-
-    &::-webkit-scrollbar {
-
-      height : 6px;
-    }
-
-    /* Track */
-    &::-webkit-scrollbar-track {
-      background : #f1f1f1;
-    }
-
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-      background : $app-color;
-
-    }
-
-    a {
-      width      : 100%;
-      display    : block;
-      color      : black;
-      transition : 0.3s;
-
-      &:hover {
-        background-color : rgba(0, 0, 0, 0.05);
-      }
-    }
-  }
-
-
-  .G-table-tr {
-    display         : flex;
-    justify-content : space-between;
-
-    .G-table-td {
-      padding     : 10px;
-      min-height  : 45px;
-      display     : flex;
-      align-items : center;
-      position    : relative;
-      max-width   : 100%;
-      border-left : 1px solid $gray;
-
-      &:first-child {
-        border-left : 1px solid transparent;
-      }
-
-
-      p {
-        overflow      : hidden;
-        text-overflow : ellipsis;
-        font-weight   : normal;
-        white-space   : nowrap;
-        text-align    : center;
-      }
-
-    }
-
-  }
-
-
-  .G-table-header {
-    .G-table-tr {
-      P {
-        font-weight : 500;
-      }
-    }
-  }
-
-  .G-table-body {
-    .G-table-tr {
-      cursor : pointer;
-      &:hover{
-        .G-table-td{
-          background-color: rgba(0,0,0,0.04);
-        }
-      }
-    }
-
-    .G-table-td {
-      transition: 0.3s;
-      border-top : 1px solid $gray;
-    }
-  }
-}
-
-
+//  .ant-pagination-item-active a {
+//    color : $green-select-table;
+//  }
+//
+//  .ant-pagination-item-active {
+//    border-color : $green-select-table;
+//  }
+//
+//  .ant-pagination-item-link {
+//    width           : 30px;
+//    display         : flex;
+//    align-items     : center;
+//    justify-content : center;
+//
+//    span {
+//      width : 20px;
+//    }
+//  }
+//
+//  .ant-table-thead {
+//    th {
+//      background-color : #aff1cb
+//    }
+//  }
+//
+//  .ant-table-tbody {
+//    tr {
+//      cursor : pointer;
+//
+//      &:hover {
+//        td {
+//          background-color : $green-hover-table;
+//        }
+//      }
+//    }
+//  }
+//
+//
+//  .select-row {
+//    td {
+//      background-color : $green-select-table !important;
+//      color            : white;
+//    }
+//  }
+//}
+//
+//
+//.P-verification-table {
+//
+//  .ant-table-cell {
+//    &:nth-child(2) {
+//      width : 200px;
+//    }
+//
+//    &:nth-child(5) {
+//      width : 250px;
+//    }
+//
+//    &:last-child {
+//      width : 300px;
+//    }
+//
+//  }
+//
+//  .ant-table-tbody {
+//    tr {
+//      cursor : pointer;
+//
+//      &:hover {
+//        td {
+//          background-color : $green-hover-table;
+//        }
+//      }
+//    }
+//  }
+//
+//
+//}

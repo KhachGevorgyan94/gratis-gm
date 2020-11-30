@@ -1,0 +1,50 @@
+@import "src/assets/styles/variables";
+
+.P-save-reject-modal-container {
+  max-width : 450px;
+  width     : 100%;
+}
+
+.P-save-reject-modal {
+  padding : 25px;
+}
+
+.P-save-reject-modal-title {
+  h3 {
+    font-size     : 18px;
+    font-weight   : bold;
+    text-align    : center;
+    margin-bottom : 30px;
+  }
+}
+
+.P-save-reject-buttons {
+  width           : 100%;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+
+  p {
+    margin-right : 30px;
+    font-size    : 18px;
+    font-weight  : bold;
+    color        : $gray;
+    cursor       : pointer;
+  }
+
+}
+
+.P-save-reject-btn {
+  max-width : 200px;
+  width     : 100%;
+  &.P-reject-btn{
+    button{
+      background-color: $red;
+      border: 1px solid $red;
+    }
+  }
+
+  button {
+    color : $white;
+  }
+}

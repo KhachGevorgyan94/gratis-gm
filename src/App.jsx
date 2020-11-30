@@ -5,23 +5,25 @@ import Sidebar from "./components/sidebar";
 import './assets/styles/index.scss';
 import {ToastContainer} from 'react-toastify';
 import RouteServices from './platform/serivces/route-services'
-import {LanguageEnum} from "./platform/serivces/settings";
+import Settings, {LanguageEnum} from "./platform/serivces/settings";
 
 //
 class App extends Component {
 
   state = {
     initialStorageFetched: false,
-    routerList: null
+    routerList: null,
+    isOpenMiniMenu: false
   };
 
-  componentDidMount() {
-    if(!localStorage.getItem('Language')){
+  componentDidMount =async ()=> {
+    if (!localStorage.getItem('Language')) {
       localStorage.setItem('Language', LanguageEnum.Russian)
     }
 
     window.routerHistory = createBrowserHistory();
     window.routerHistory.listen(() => window.scrollTo(0, 0));
+    await Settings.getCountryAndCarProps()
 
     this.setState({
       initialStorageFetched: true,
@@ -30,14 +32,19 @@ class App extends Component {
 
   }
 
+  openMenu = () => {
+    this.setState({
+      isOpenMiniMenu: !this.state.isOpenMiniMenu
+    })
+  }
 
   render() {
     const {routerList, initialStorageFetched} = this.state
-    return initialStorageFetched &&(
+    return initialStorageFetched && (
 
-        <div className="G-flex G-justify-between">
-          <BrowserRouter >
-            {RouteServices.getSideBarList() && RouteServices.isRole()  ? <Sidebar/> : null}
+        <div className={`G-flex G-justify-between ${this.state.isOpenMiniMenu ? ' P-open-mini-menu' : ''}`}>
+          <BrowserRouter>
+            {RouteServices.getSideBarList() && RouteServices.isRole() ? <Sidebar onChange={this.openMenu} /> : null}
 
             <Switch>
               {RouteServices.getRoleRouter().pages.map((item) => {

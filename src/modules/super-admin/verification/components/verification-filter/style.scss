@@ -1,0 +1,29 @@
+.P-verification-filter {
+  width   : 270px !important;
+  padding : 0 15px !important;
+
+  label {
+    position : relative;
+
+    input {
+      padding-right : 45px !important;
+    }
+
+    .P-search-icon {
+      width               : 20px;
+      height              : 20px;
+      display             : block;
+      position            : absolute;
+      right               : 10px;
+      top                 : 50%;
+      transform           : translateY(-50%);
+      background-position : center;
+      background-repeat   : no-repeat;
+      background-size     : contain;
+    }
+  }
+}
+
+.P-verification-filter-section {
+  margin : 0 -15px 35px -15px;
+}

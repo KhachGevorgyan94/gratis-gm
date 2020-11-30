@@ -15,7 +15,9 @@
 const ROUTES = {
   SUPER_ADMIN: {
     MAIN: '/dashboard',
-    PHOTO_CONTROL: '/photo-control'
+    PHOTO_CONTROL: '/photo-control',
+    VERIFICATION: '/verification',
+    USERS: '/users'
 
   },
 

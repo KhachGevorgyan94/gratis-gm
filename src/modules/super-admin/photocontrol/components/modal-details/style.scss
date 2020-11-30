@@ -1,0 +1,340 @@
+@import "src/assets/styles/variables";
+
+.P-photo-control-details-block {
+  width    : 100%;
+  padding  : 35px 25px;
+
+  position : relative;
+}
+
+
+.P-edit-details {
+  width  : 30px;
+  height : 30px;
+  cursor : pointer;
+
+  svg {
+    path {
+      fill : $app-color;
+
+    }
+  }
+
+  &.P-close-svg {
+    svg {
+      width  : 25px;
+      height : 25px;
+
+      path {
+        fill : $red;
+
+      }
+    }
+  }
+
+}
+
+
+.P-photo-control-details-title {
+  h3 {
+    margin-left : 25px;
+    font-size   : 22px;
+    font-weight : bold;
+    display: flex;
+    align-items: center;
+
+    p{
+      margin-left: 15px;
+    }
+  }
+}
+
+
+.P-photo-control-section {
+  margin-top : 45px;
+  width      : 100%;
+
+  .P-photo-control-box {
+    width : 50%;
+
+    &:last-child {
+      padding-left : 30px;
+      @media(max-width : 1199.98px) {
+        padding-left   : 0;
+        padding-bottom : 30px;
+      }
+
+    }
+
+    @media(max-width : 1199.98px) {
+      width : 100%;
+    }
+  }
+}
+
+
+.P-photo-control-details-inputs {
+  width       : 100%;
+  display     : flex;
+  flex-wrap   : wrap;
+  align-items : flex-start;
+  margin      : 0 -15px;
+
+  .G-input {
+    width : 50%;
+
+    label {
+      width : calc(100% - 80px);
+    }
+  }
+}
+
+.P-photo-control-box-title {
+  h3 {
+    font-weight : 600;
+  }
+
+  & ~ .P-photo-control-box-title {
+    margin-top : 30px;
+  }
+
+}
+
+.P-edit-photo-control {
+  display     : flex;
+  align-items : center;
+
+  > div {
+    width : calc(100% - 80px);
+  }
+
+  .E-click-outside {
+    width : calc(100% - 80px);
+
+    .E-select-content {
+      max-height : 200px;
+    }
+  }
+}
+
+
+.P-edit-images-box {
+  padding : 15px 0;
+}
+
+.P-edit-images-right {
+  ul {
+    display     : flex;
+    flex-wrap   : wrap;
+    align-items : flex-start;
+
+    li {
+      width   : 120px;
+      padding : 5px;
+
+      h3 {
+        font-size     : 14px;
+        text-align    : center;
+        margin-bottom : 10px;
+
+
+      }
+
+      .P-image-edit {
+        width  : 100%;
+        height : 70px;
+      }
+    }
+  }
+}
+
+.P-edit-images-left {
+  padding-right : 35px;
+  margin-top    : 60px;
+}
+
+.P-edit-images-section {
+  border-top : 1px solid $shadow-black;
+}
+
+
+.P-edit-photo-control-verify, .P-edit-photo-control-reject, .P-edit-photo-control-close {
+  max-width : 250px;
+  width     : 100%;
+  margin    : 0 15px;
+
+  button {
+    height : 45px;
+  }
+}
+
+.P-edit-photo-control-reject {
+  button {
+    background-color : $red;
+    border-color     : $red;
+
+    &:hover {
+      background-color : $red;
+      border-color     : $red;
+    }
+  }
+
+}
+
+.P-edit-photo-control-close {
+  button {
+    background-color : $yellow;
+    border-color     : $yellow;
+
+    &:hover {
+      background-color : $yellow;
+      border-color     : $yellow;
+    }
+  }
+}
+
+
+.P-edit-photo-control-btn {
+  margin-top : 30px;
+}
+
+
+@media(max-width : 1199.98px) {
+  .P-photo-control-section {
+    flex-direction : column-reverse;
+
+  }
+}
+
+.P-reject-color {
+  color       : $red;
+  font-size   : 20px;
+  display     : block;
+  margin-left : 55px;
+  font-weight : bold;
+}
+
+.P-pending-color {
+  color       : $yellow;
+  font-size   : 20px;
+  display     : block;
+  margin-left : 55px;
+  font-weight : bold;
+}
+.P-order-pending-color {
+  color       : $green-select-table;
+  font-size   : 20px;
+  display     : block;
+  margin-left : 55px;
+  font-weight : bold;
+}
+
+.P-title-details-modal{
+  font-size   : 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 55px;
+  span{
+    display: block;
+    margin-right: 10px;
+
+    color: $green-select-table;
+  }
+}
+.P-slider-block {
+  display        : flex;
+  flex-direction : column;
+  margin-bottom  : 10px;
+
+    width : 100%;
+
+    .slick-prev {
+      left    : 25px;
+      z-index : 99;
+
+      &:before {
+        font-size : 30px;
+      }
+    }
+
+    .slick-next {
+      right   : 25px;
+      z-index : 99;
+
+      &:before {
+        font-size : 30px;
+      }
+    }
+
+
+
+}
+
+.P-slider-image {
+  background-position : center;
+  background-repeat   : no-repeat;
+  background-size     : cover;
+}
+
+.P-viewer-container {
+  min-height : 350px;
+
+  .react-viewer-inline {
+    min-height : 350px;
+
+    .react-viewer-close {
+      display : none;
+    }
+
+    .react-viewer-canvas {
+      > div {
+        height : 100% !important;
+      }
+    }
+  }
+}
+
+.G-slider-image {
+  min-height          : 350px;
+  background-position : center;
+  background-repeat   : no-repeat;
+  background-size     : cover;
+}
+
+
+
+.P-open-slider-modal {
+  position : absolute;
+
+}
+
+
+.P-open-slider-modal {
+  width            : 35px;
+  height           : 35px;
+  background-color : rgba(0, 0, 0, 0.3);
+  border-radius    : 50%;
+  overflow         : hidden;
+
+  position         : absolute;
+  z-index          : 9999999;
+  right            : 15px;
+  top              : 15px;
+  cursor           : pointer;
+
+  i {
+    transform           : scale(0.5);
+    background-position : center;
+    background-repeat   : no-repeat;
+    background-size     : contain;
+    display             : block;
+    width               : 100%;
+    height              : 100%;
+  }
+}
+
+.P-slider-block{
+  position: relative;
+
+
+}

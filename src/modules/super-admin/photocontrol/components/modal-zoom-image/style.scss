@@ -1,0 +1,81 @@
+@import "src/assets/styles/variables";
+
+.lds-roller {
+  &.L-for-zoom-loader {
+    position  : absolute;
+    left      : 50%;
+    top       : 50%;
+    transform : translate(-50%, -50%);
+    z-index   : 999;
+  }
+}
+
+.P-modal-zoom-container {
+  position : relative;
+  height   : 98vh;
+}
+
+
+.P-tools {
+  position       : absolute;
+  right          : 15px;
+  bottom         : 15px;
+  display        : flex;
+  flex-direction : column;
+  z-index        : 999;
+
+  button {
+    width            : 35px;
+    height           : 35px;
+    color            : $app-color;
+    font-size        : 25px;
+    font-weight      : bold;
+    background-color : $white;
+    box-shadow       : 0 0 3px 2px $shadow-black;
+    border-radius    : 10px;
+  }
+
+  button + button {
+    margin-top : 15px;
+  }
+}
+
+.P-modal-zoom-block{
+  .P-viewer-container {
+    .react-viewer-inline {
+      min-height : 100vh;
+    }
+  }
+
+
+
+
+  .react-viewer-toolbar{
+    margin-bottom: 15px !important;
+  }
+  //.react-viewer-btn{
+  //  &:nth-child(3){
+  //    display: none;
+  //  }
+  //  &:nth-child(5){
+  //    display: none;
+  //  }
+  //}
+  //
+  //&.P-show-images{
+  //  .react-viewer-btn{
+  //    &:nth-child(3){
+  //      display: block;
+  //    }
+  //    &:nth-child(5){
+  //      display: block;
+  //    }
+  //  }
+  //  .react-viewer-navbar {
+  //    display : block;
+  //  }
+  //}
+}
+
+
+

@@ -1,53 +1,106 @@
 @import "src/assets/styles/variables";
+
 .P-photo-control-table-block {
 
   margin-top : 30px;
 
-  .G-table-header {
-    p {
-      font-size : 13px !important;
+  .P-photo-control-table {
+    .B-data-table-body {
+      > ul {
+        height : 140px;
+      }
     }
   }
 
-  .G-table-td {
-    max-width       : 100px;
-    min-width       : 130px;
-    display         : flex;
-    align-items     : center;
-    justify-content : center;
+
+}
+
+.P-car-images {
+  width  : 100%;
+  height : 80px;
+}
+
+
+.P-photo-control-information {
+  ul {
+    width : 50%;
+
+    li {
+      display   : flex;
+      flex-wrap : wrap;
+
+      span {
+        &:first-child {
+          margin-right : 10px;
+          font-weight  : bold;
+        }
+
+        &:last-child {
+          word-break : break-word;
+        }
+      }
+    }
 
     &:first-child {
-      min-width      : 250px;
-      display        : flex;
-      flex-direction : column;
-      align-items    : flex-start !important;
-      ul{
-        width: 100%;
-        li{
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+      padding-right : 10px;
+    }
+  }
+}
+
+.P-photo-control-table {
+  &.B-data-table {
+    height : calc(100vh - 250px) !important;;
+  }
+}
+
+.P-photo-table-image {
+  width               : 100%;
+  height              : 100px;
+  background-size     : cover;
+  background-repeat   : no-repeat;
+  background-position : center;
+}
+
+
+.P-photo-control-table {
+  .B-data-table-header {
+    li {
+      &:nth-child(2) {
+        span {
+          width : 25px;
         }
       }
-      h3{
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 3px;
-      }
-      p{
 
-        font-size: 14px;
-        margin-top: 3px;
-        span{        font-weight: 600;
+      &:nth-child(4) {
+        span {
+          width : 25px;
         }
       }
     }
   }
 
+  .P-table-header {
+    display     : flex;
+    align-items : center;
 
+    span {
+      width               : 30px;
+      height              : 25px;
+      background-position : center;
+      background-repeat   : no-repeat;
+      background-size     : contain;
+      margin-right        : 5px;
+    }
+  }
 }
 
-.P-car-images{
-  width: 100%;
-  height: 80px;
+.P-status-photo-control {
+  width               : 20px;
+  height              : 20px;
+  background-position : center;
+  background-repeat   : no-repeat;
+  background-size     : contain;
+  display             : block;
+  margin-bottom       : 10px;
 }
+

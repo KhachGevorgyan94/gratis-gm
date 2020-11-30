@@ -1,0 +1,380 @@
+@import "../../assets/styles/variables";
+
+.B-data-table {
+  color      : #161515;
+  overflow   : hidden;
+  overflow-y : scroll;
+  overflow-x : auto;
+
+  &::-webkit-scrollbar-thumb {
+    width            : 5px;
+    background-color : $green-select-table;
+    border-radius    : 10px;
+  }
+
+  &::-webkit-scrollbar {
+    background-color : $shadow-black-1;
+    width            : 10px;
+    height           : 10px;
+  }
+
+  @media(max-width : 991px) {
+    //& {
+    //  min-width : 900px;
+    //
+    //}
+  }
+
+  .B-data-table-header {
+    margin           : 0;
+    z-index          : 2;
+    display          : flex;
+    font-size        : 14px;
+    align-items      : center;
+    list-style-type  : none;
+    background-color : white;
+    border           : 1px solid #ececec;
+    border-left      : none;
+    box-shadow       : 0 0 10px $shadow-black;
+    position         : sticky;
+    top              : 0;
+
+    &::-webkit-scrollbar {
+      display : none;
+    }
+
+    > li {
+      padding       : 0 10px;
+      padding-right : 25px;
+      height        : 35px;
+      width         : 100%;
+      color         : black;
+      font-size     : 14px;
+      font-weight   : bold;
+      display       : flex;
+      align-items   : center;
+      border-left   : 2px solid #ececec;
+      position      : relative;
+      transition    : 0.3s;
+      left          : auto;
+
+      p {
+        text-overflow : ellipsis;
+        overflow      : hidden;
+        white-space   : nowrap;
+      }
+
+      &:hover {
+        .P-drag-drop-icon {
+          opacity    : 1;
+          visibility : visible;
+        }
+      }
+
+      .P-drag-drop-icon {
+        width               : 15px;
+        height              : 15px;
+        position            : absolute;
+        top                 : 5px;
+        right               : 5px;
+        background-position : center;
+        background-repeat   : no-repeat;
+        background-size     : contain;
+        cursor              : pointer;
+        display             : block;
+        opacity             : 0;
+        visibility          : hidden;
+        transition          : 0.3s;
+      }
+
+      &:hover {
+        .P-fixed-icon {
+          opacity    : 1;
+          visibility : visible;
+        }
+      }
+
+      &.P-active-column {
+        background-color : $green-hover-table;
+        color            : $white;
+      }
+    }
+  }
+
+  .B-data-table-body {
+    background : white;
+
+    a {
+      text-decoration : none;
+    }
+
+    > ul, > a {
+      color           : black;
+      height          : 30px;
+      margin          : 0;
+      z-index         : 1;
+      display         : flex;
+      position        : relative;
+      font-size       : 14px;
+      align-items     : center;
+      list-style-type : none;
+      cursor          : pointer;
+
+
+      &:hover {
+        >li {
+          background-color : $green-hover-table;
+        }
+      }
+
+      > li {
+
+        width         : 100%;
+        height        : 100%;
+        display       : block;
+        position      : relative;
+        overflow      : hidden;
+        font-size     : 13px;
+        white-space   : nowrap;
+        align-items   : center;
+        padding       : 0 10px;
+        text-overflow : ellipsis;
+        border        : 1px solid #ececec;
+        transition    : 0.3s;
+        left          : auto;
+
+
+        &.G-data-table-select {
+          background-color : $green-select-table;
+          color            : $white;
+        }
+
+
+        > div {
+
+          top           : 50%;
+          width         : 100%;
+          float         : left;
+          overflow      : hidden;
+          position      : relative;
+          transform     : translateY(-50%);
+          white-space   : nowrap;
+          text-overflow : ellipsis;
+
+          > .B-user-name {
+            display     : flex;
+            align-items : center;
+
+            > .B-data-table-image-row {
+              width         : 40px;
+              height        : 40px;
+              border-radius : 50%;
+            }
+
+            & span {
+              font-size   : 16px;
+              color       : #000;
+              margin-left : 15px;
+            }
+          }
+
+
+          > .B-data-table-image-row-text {
+
+            height      : 40px;
+            margin-left : 10px;
+            line-height : 40px;
+          }
+
+          .B-data-table-action {
+
+            color        : #959595;
+            cursor       : pointer;
+            font-size    : 40px;
+            font-style   : normal;
+            user-select  : none;
+            margin-right : 10px;
+
+            &[class^="icon-"], &[class*=" icon-"] {
+
+              font-size : 25px;
+            }
+          }
+        }
+
+        &.B-data-table-actions {
+
+          right    : 20px;
+          width    : auto;
+          display  : none;
+          position : absolute;
+        }
+      }
+    }
+  }
+}
+
+.B-data-empty {
+  min-height      : 250px;
+  text-align      : center;
+  display         : flex;
+  flex-direction  : column;
+  padding         : 25px;
+  align-items     : center;
+  justify-content : center;
+
+  p {
+
+    color       : black;
+    font-size   : 16px;
+    font-weight : bold;
+  }
+
+  .B-data-empty-img {
+    width               : 100px;
+    height              : 100px;
+    background-position : center;
+    background-repeat   : no-repeat;
+    background-size     : contain;
+    margin-bottom       : 45px;
+
+    &:before {
+      font-size : 90px;
+    }
+  }
+}
+
+.B-user-list {
+  .B-data-empty-img {
+    margin-bottom : 20px !important;
+  }
+}
+
+.B-data-scroll {
+  display : grid;
+}
+
+
+//.B-dat-table-drag {
+//  .B-data-table-header {
+//    li:active{
+//      cursor: url(ass);
+//      cursor: -webkit-grabbing;
+//      cursor:    -moz-grabbing;
+//      cursor:         grabbing;
+//    }
+//  }
+//}
+
+.B-data-table-list {
+  margin        : 0 -15px 25px;
+}
+
+
+//   for  table  resize  only  table blocks
+
+//.resizer {
+//  position    : absolute;
+//  top         : 0;
+//  right       : 0;
+//  width       : 5px;
+//  cursor      : col-resize;
+//  user-select : none;
+//}
+//
+//.resizer:hover, .resizing {
+//  border-right : 2px solid blue;
+//}
+//
+//.resizable {
+//  border   : 1px solid gray;
+//  height   : 100px;
+//  width    : 100px;
+//  position : relative;
+//}
+
+//.table {
+//  border-collapse : collapse;
+//}
+//
+//.table, .table th, .table td {
+//  border : 1px solid #ccc;
+//}
+//
+//.table th, .table td {
+//  padding : 0.5rem;
+//}
+//
+//.table th {
+//}
+//
+//thead {
+//  tr{
+//   th{
+//     position : sticky;
+//     top      : 0;
+//     background-color: white;
+//     border: 1px solid black !important;
+//
+//   }
+//  }
+//
+//}
+//
+
+
+.P-fixed-icon {
+  position            : absolute;
+  right               : 5px;
+  top                 : 5px;
+  width               : 15px;
+  height              : 15px;
+  background-position : center;
+  background-repeat   : no-repeat;
+  background-size     : contain;
+  cursor              : pointer;
+  opacity             : 0;
+  visibility          : hidden;
+  transition          : 0.3s;
+}
+
+.P-fixed-column-menu {
+  position         : absolute;
+  width            : 100%;
+  height           : 100%;
+  background-color : white;
+  overflow         : hidden;
+
+  ul {
+    li {
+      font-size     : 12px;
+      font-weight   : normal;
+      white-space   : nowrap;
+      text-overflow : ellipsis;
+      overflow      : hidden;
+      cursor        : pointer;
+      transition    : 0.3s;
+
+    }
+  }
+}
+
+.P-fixed-columns {
+  position         : sticky !important;
+  background-color : $white;
+  z-index          : 9;
+  box-shadow       : 14px 0 21px -8px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.P-disable-fixed {
+  left : auto !important;
+}
+
+.P-last-column {
+}
+
+.P-multi-select-input-box {
+  padding : 0 15px;
+}

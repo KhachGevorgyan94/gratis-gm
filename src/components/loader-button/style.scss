@@ -18,6 +18,10 @@
     padding          : 0 10px;
     border-radius    : 20px;
 
+    &:disabled{
+      opacity: 0.5;
+    }
+
     p {
       color      : $white;
       font-size  : 18px;
@@ -30,7 +34,6 @@
     &:disabled {
       cursor           : no-drop;
       transition       : 0.3s;
-      background-color : $app-color;
     }
 
     @media(max-width : 766.98px) {

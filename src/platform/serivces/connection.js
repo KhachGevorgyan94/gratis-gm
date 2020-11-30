@@ -72,7 +72,7 @@ class Connection {
             body: JSON.stringify(body),
             method: 'PUT',
             headers: HEADERS,
-            credentials: 'include',
+            // credentials: 'include',
         })
 
         window.pendingRequest = false;
@@ -86,7 +86,7 @@ class Connection {
         const response = await fetch(`${Connection.BASE_URL}/${controllerName}${!onlyQuery ? '/' : ''}${actionName}${queryConfig ? `?${Connection.queryFromObject(queryConfig)}` : ''}`, {
             method: 'DELETE',
             headers: HEADERS,
-            credentials: 'include',
+            // credentials: 'include',
         });
 
         window.pendingRequest = false;

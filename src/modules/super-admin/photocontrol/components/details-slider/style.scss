@@ -1,0 +1,81 @@
+@import "src/assets/styles/variables";
+
+.P-slider-details {
+  position: relative;
+
+  .P-slider-main {
+    width : 100%;
+
+    .slick-prev {
+      left    : 25px;
+      z-index : 99;
+
+      &:before {
+        font-size : 30px;
+      }
+    }
+
+    .slick-next {
+      right   : 25px;
+      z-index : 99;
+
+      &:before {
+        font-size : 30px;
+      }
+    }
+
+
+  }
+}
+
+.P-slider-sub-box {
+  height : 60px;
+}
+
+
+.P-slider-sub-container {
+  padding : 5px;
+}
+
+.P-slider-sub {
+  margin : 0 -5px;
+
+  .P-slider-sub-box {
+    cursor : pointer;
+    border : 5px solid transparent;
+  }
+
+  .slick-current {
+    .P-slider-sub-box {
+      border : 5px solid $app-color;
+    }
+  }
+}
+
+
+.P-slider-main {
+  .react-viewer-navbar {
+    display : none;
+  }
+
+  .P-viewer-container {
+    .react-viewer-inline {
+      min-height : 350px;
+
+      .react-viewer-close {
+        display : none;
+      }
+
+      .react-viewer-canvas {
+        > div {
+          height : 100% !important;
+        }
+      }
+    }
+  }
+
+}
+
+.P-slider-main {
+  position : relative;
+}

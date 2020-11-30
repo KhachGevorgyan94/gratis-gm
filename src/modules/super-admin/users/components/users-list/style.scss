@@ -1,0 +1,46 @@
+.P-user-table {
+
+  td{
+    font-size: 13px;
+  }
+
+  .ant-table-body {
+    min-height : calc(100vh - 320px) !important;
+  }
+
+  .ant-table-measure-row {
+    line-height : 0;
+    font-size   : 0;
+    td{
+      padding: 0 !important;
+    }
+
+  }
+
+  .P-change-text {
+    text-overflow : ellipsis;
+    overflow      : hidden;
+    white-space   : nowrap;
+  }
+  .ant-table-cell {
+
+    &:nth-child(5) {
+      width     : 100%;
+      min-width : 200px !important;
+      max-width : 200px  !important;
+    }
+  }
+}
+
+
+
+.P-user-table{
+  &.B-data-table{
+      height: calc(100vh - 280px) !important;;
+  }
+}
+
+.P-text-ellipsis{
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
